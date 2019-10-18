@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+    <link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="music_player_page" class="ui-page">
+        <header id="music_player_header" class="ui-header ui-has-more">
+            <button id="more-option-button" type="button" class="ui-more ui-icon-overflow"></button>
+        </header>
+
+        <div id="music_player_content" class="ui-content content-padding">
+
+            <div id="div_background"></div>
+            <div id="div_now_playing">
+                <div id="div_play" class="play btn">
+                    <audio id="myaudio"></audio>
+                </div>
+
+                <div id="div_title"></div>
+                <br>
+                <span class="text-message">
+                <div id="div_artistname"></div>
+                <div id="div_songtitle"></div>
+                <div id="div_playlist"></div>
+               
+                <div id="div_prev" class="btn"></div>
+                <div id="div_next" class="btn"></div>
+                <div id="div_device" class="gear"></div>
+                <span class="text-message">Suits your mood?</span>
+                <div style="margin: 10px;">
+                    <table class="table-measure">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="css/images/check_icon.png" alt="YES" width="30px" height="30px" style="float: right;">
+                                </td>
+                               
+                                <td>
+                                    <img src="css/images/cross_icon.png" alt="NO" width="30px" height="30px" style="float: left;">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <!-- Circle Profile -->
+        <div id="moreoptionsPopupCircle" class="ui-popup">
+            <div id="selector" class="ui-selector">
+                <div class="ui-item device-gear" data-title="Device Gear"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/getcontent.js"></script>
+    <script src="js/moreoptions.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+</body>
+
+</html>
